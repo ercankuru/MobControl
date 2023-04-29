@@ -340,7 +340,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027487003}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a8092e803ab2d444dabe17fb8413f8fa, type: 3}
   m_Name: 
@@ -454,14 +454,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2002428711}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7128221, z: 0, w: 0.7013449}
   m_LocalPosition: {x: -0.02, y: -4.4, z: -20.41}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90.93, z: 0}
 --- !u!114 &2002428717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -471,10 +471,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2002428711}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 067dbc276fc48904fb4779fbbe518730, type: 3}
+  m_Script: {fileID: 11500000, guid: ad75d3c1746fa1443ba55f3e525aac63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  playerPrefab: {fileID: 2002428711}
+  newObjectPrefab: {fileID: 5832433587735194619, guid: fa3c90eb43f993c4081f235113429529, type: 3}
+  spawnRate: 0.1
+  speed: 10
 --- !u!33 &413299563548097631
 MeshFilter:
   m_ObjectHideFlags: 0
