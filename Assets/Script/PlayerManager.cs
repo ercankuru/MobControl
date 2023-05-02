@@ -14,6 +14,8 @@ public class PlayerManager : MonoBehaviour
     private float spawnTimer = 0f;
     private bool isMouseDown = false;
 
+    
+
     private void Update()
     {
         // Sol fare tuþuna basýldýysa yeni nesne oluþtur
@@ -53,25 +55,38 @@ public class PlayerManager : MonoBehaviour
     private void SpawnNewObject()
     {
         // Player nesnesinin dönüþünü al
-        Quaternion rotation = transform.rotation;
+        //Quaternion rotation = transform.rotation;
 
         // Yatay eksen etrafýnda 90 derece saða dönüþtür
        // Vector3 rightVector = Quaternion.AngleAxis(-90f, Vector3.up) * transform.forward;
         //Vector3 rightVector2 = Quaternion.AngleAxis(0f, Vector3.up) * transform.forward;
 
+
+
         // Yeni nesne oluþtur ve konumunu belirle
         GameObject newObject = Instantiate(newObjectPrefab);
         newObject.transform.position = playerSpawn.transform.position ;
-        newObject.transform.rotation = rotation;
+
+
+
+       // newObject.transform.rotation = rotation;
         // Yeni nesnenin yönünü belirle
         //Quaternion newObjectRotation = Quaternion.LookRotation(rightVector2, Vector3.up);
         //newObject.transform.rotation = newObjectRotation;
 
 
+
         // Yeni nesneyi hareket ettir
+        
         Rigidbody rigidbody = newObject.GetComponent<Rigidbody>();
-        rigidbody.velocity = transform.forward * speed;
+        rigidbody.velocity = transform.forward * speed * 2f;
+
     }
+
+
+
+
+
 }
 
 
